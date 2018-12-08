@@ -1,0 +1,33 @@
+body {
+    width: 99%;
+    height: 900px;
+    background-color: #fc6;
+  }
+  
+.brgr_devour{
+  padding-bottom: 20px;
+}
+
+.new_burger{
+  margin-top: 30px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.burger{
+  border-color: grey;
+  border-style: solid;
+  border-width: 3px;
+}
+
+#burger_button{
+  margin-top: 10px;
+}
+
+#burger_text{
+  width: 500px;
+  height: 80px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin: auto;
+}

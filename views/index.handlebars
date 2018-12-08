@@ -1,0 +1,43 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 text-center title-logo">
+            <img src="/assets/img/532729.png" alt="krusty burger">
+            <h1>Eat Da burger App!</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6 text-center">
+            <div class="row">
+                {{#each burger_data}}
+                    {{#unless this.devoured}}
+                    <div class="col-md-9 text-center burger">
+                        <pre>{{this.id}}. {{this.burger_name}}</pre>
+                    </div>
+                    <div class="col-md-3 text-center">
+                        <form class="brgr_devour">
+                            <input type="hidden" class="burger_id" type="text" value={{this.id}}>
+                            <br>
+                            <button type="submit" id={{this.id}} class="btn btn-default devour_btn">Devour It!</button>
+                        </form>
+                    </div>
+                    {{/unless}}
+                {{/each}}
+            </div>
+        </div>
+        <div class="col-md-6 text-center burger">
+            {{#each burger_data}}
+                {{#if this.devoured}}
+                    <pre>{{this.id}}. {{this.burger_name}}</pre>
+                {{/if}}
+            {{/each}}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12 text-center new_burger">
+            <form action="/burgers/create" method="POST">
+                <input type="text" class="form-control" name="burger_name" value="" id="burger_text">
+                <button type="submit" class="btn btn-primary" id="burger_button">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
